@@ -1,0 +1,107 @@
+/* src/components/PratoCard/PratoCard.module.css */
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.imageContainer {
+    width: 100%;
+    padding-top: 66.66%;
+    position: relative;
+    background-color: #f0f0f0;
+}
+
+.image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.esgotadoOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.card.esgotado .image {
+    filter: grayscale(80%);
+}
+
+
+.content {
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.nome {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #3c4043;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.categoria {
+    font-size: 0.8rem;
+    color: #1a73e8;
+    background-color: #e8f0fe;
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.descricao {
+    font-size: 0.9rem;
+    color: #5f6368;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 10px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.preco {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1e8e3e;
+}
